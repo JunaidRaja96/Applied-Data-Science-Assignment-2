@@ -10,7 +10,7 @@ print(data.describe())
 
 print(data.info())
 
-#histogram
+#Histogram
 plt.figure(figsize=(8, 6))
 plt.hist(data['max_temp'], bins=20, edgecolor='black')
 plt.title('Distribution of Max Temperature')
@@ -19,6 +19,7 @@ plt.ylabel('Frequency')
 plt.grid(True)
 plt.show()
 
+#Scatter
 plt.figure(figsize=(8, 6))
 plt.scatter(data['max_temp'], data['min_temp'], alpha=0.7)
 plt.title('Max Temperature vs Min Temperature')
@@ -53,6 +54,7 @@ plt.show()
 
 type_distribution = data['type'].value_counts()
 
+#Pie
 plt.figure(figsize=(8, 8))
 plt.pie(type_distribution, labels=type_distribution.index, autopct='%1.1f%%', startangle=140)
 plt.title('Distribution of Weather Types')
